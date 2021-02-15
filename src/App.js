@@ -1,28 +1,24 @@
 import './App.css';
 import React from "react";
-import { Button, Typography } from "@material-ui/core";
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles({
-  helloThereStyle: {
-    fontStyle: 'oblique',
-    textAlign: 'center',
-    color: 'red'
-  }
-})
+import Boiler from './components/Boiler';
+import useStyles from './components/styles/placeholder';
+import { Grid } from '@material-ui/core';
+import Header from './components/Header';
 
 function App() {
 
-  const classes = useStyles();
-
-  let button_bool = false;
-
   return (
     <React.Fragment>
-      <Typography className={classes.helloThereStyle} variant="h1" color="primary">Hello there</Typography>
-      <div className="center_flex">
-        <Button className="button_center" disabled={button_bool} fullWidth={false} color="secondary" variant="outlined">This is a button</Button>
-      </div>
+      <Grid container direction="column">
+        <Grid item container>
+          <Header></Header>
+        </Grid>
+        <Grid item container>
+          <Grid item xs={2}> </Grid>
+          <Grid item xs={12} sm={8}> This is where the content will be</Grid>
+          <Grid item xs={2}></Grid>
+        </Grid>  
+      </Grid>
     </React.Fragment>
   );
 }

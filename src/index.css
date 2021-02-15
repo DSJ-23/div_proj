@@ -12,9 +12,18 @@ code {
     monospace;
 }
 
+.margin_typography {
+  padding: 1.5%;
+}
+
+.snowflake {
+  padding-top: 1.5%;
+}
+
 .center_flex {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .box {
